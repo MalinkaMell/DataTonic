@@ -1,0 +1,24 @@
+.navbar {
+  background-image: linear-gradient(to right, #0077BA, #1550A0);
+}
+
+.navbar-brand {
+  border-right: 1px solid #cccccc;
+  padding-right: 20px;
+}
+
+.navlink {
+  margin: 0 10px;
+  color: #eeeeee;
+  font-weight: 300;
+}
+
+.navlink:hover {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 400;
+  color: #ffffff!important;
+}
