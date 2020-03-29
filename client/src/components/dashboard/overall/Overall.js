@@ -17,7 +17,6 @@ const Overall = props => {
     return color;
   }
   
-  console.log(props)
 
   return (
     <Col md="4">

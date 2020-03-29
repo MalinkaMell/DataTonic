@@ -7,6 +7,9 @@ import { Row, Col } from "react-bootstrap";
 import Panel from "../components/elements/panel/Panel";
 import TransactionsByArea from "../components/dashboard/transactions/First";
 import Refunds from "../components/dashboard/refunds/First";
+import TransactionsByHours from "../components/dashboard/transactions/Second";
+import RefundsByHours from "../components/dashboard/refunds/Second";
+import Lost from "../components/dashboard/lost/Lost";
 
 const Dashboard = () => {
   return (
@@ -26,7 +29,7 @@ const Dashboard = () => {
         </Col>
         <Col md="6">
           <Panel>
-            <h1>By Hours goes here</h1>
+            <TransactionsByHours />
           </Panel>
         </Col>
       </Row>
@@ -43,7 +46,7 @@ const Dashboard = () => {
         </Col>
         <Col md="6">
           <Panel>
-            <h1>By Hours goes here</h1>
+            <RefundsByHours />
           </Panel>
         </Col>
       </Row>
@@ -55,7 +58,7 @@ const Dashboard = () => {
       <Row className="w-100">
         <Col>
           <Panel>
-            <h1>By System goes here</h1>
+            <Lost />
           </Panel>
         </Col>
       </Row>

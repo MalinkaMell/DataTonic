@@ -18,7 +18,7 @@ const OverallContainer = () => {
     return acc;
   }, {})
 
-  //mapping health and passing to overall component info nessesary fo rhealth display
+  //mapping health and passing to overall component info nessesary for health display
   return (
     <React.Fragment>
       {
