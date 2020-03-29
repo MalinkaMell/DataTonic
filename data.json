@@ -11,7 +11,7 @@
     "Microsoft": {
       "id": 2,
       "data": {
-        "success": 50,
+        "success": 90,
         "error": 20,
         "warning": 10
       }
@@ -19,15 +19,15 @@
     "Logitech": {
       "id": 3,
       "data": {
-        "success": 50,
-        "error": 20,
+        "success": 40,
+        "error": 30,
         "warning": 10
       }
     },
     "Intel": {
       "id": 4,
       "data": {
-        "success": 50,
+        "success": 80,
         "error": 20,
         "warning": 10
       }

@@ -5,7 +5,8 @@ import OverallContainer from "../components/dashboard/overall/Overallcontainer";
 import Subtitle from "../components/elements/subtitle/Subtitle";
 import { Row, Col } from "react-bootstrap";
 import Panel from "../components/elements/panel/Panel";
-import TransactionsByArea from "../components/dashboard/transactions/Area";
+import TransactionsByArea from "../components/dashboard/transactions/First";
+import Refunds from "../components/dashboard/refunds/First";
 
 const Dashboard = () => {
   return (
@@ -37,7 +38,7 @@ const Dashboard = () => {
       <Row className="w-100">
         <Col md="6">
           <Panel>
-            <h1>By Area goes here</h1>
+            <Refunds />
           </Panel>
         </Col>
         <Col md="6">

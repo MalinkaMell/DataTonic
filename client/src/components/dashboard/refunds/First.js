@@ -3,8 +3,9 @@ import { Bar } from "react-chartjs-2";
 import { ChartContext } from "../../context/Chartscontext";
 
 
-const TransactionsByArea = () => {
-  const { systems, success, errors } = useContext(ChartContext);
+const Refunds = () => {
+  
+  const { systems, success, errors, warnings } = useContext(ChartContext);
 
   const chartData = {
     labels: systems,
@@ -14,28 +15,35 @@ const TransactionsByArea = () => {
         data: success,
         backgroundColor: "darkgreen",
         hoverBackgroundColor: "green",
-        barPercentage: .6
+        barPercentage: .7
       },
       {
         label: "Error",
         data: errors,
         backgroundColor: "darkred",
         hoverBackgroundColor: "red",
-        barPercentage: .6
+        barPercentage: .7
+      },
+      {
+        label: "Warnings",
+        data: warnings,
+        backgroundColor: "orange",
+        hoverBackgroundColor: "yellow",
+        barPercentage: .7
       }
     ]
   }
 
   return (
     <React.Fragment>
-      <h5 className="mb-3">By Area</h5>
+      <h5 className="mb-3">By Passed, Failed and Warning</h5>
       <Bar
         data={chartData}
         options={{
           responsive: true,
           title: {
             display: true,
-            text: 'Number of Transactions',
+            text: "Number of Refunds",
             position: "left"
           },
           legend: {
@@ -44,7 +52,7 @@ const TransactionsByArea = () => {
           },
           tooltips: {
             mode: "index",
-            intersect: false,
+            intersect: true,
           },
           hover: {
             mode: "nearest",
@@ -74,4 +82,4 @@ const TransactionsByArea = () => {
   )
 }
 
-export default TransactionsByArea;
+export default Refunds;

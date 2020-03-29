@@ -9,6 +9,7 @@ const ChartContextProvider = props => {
   const systems = [];
   const success = [];
   const errors = [];
+  const warnings = [];
 
   for (const prop in results.systems) {
     systems.push(prop);
@@ -22,6 +23,10 @@ const ChartContextProvider = props => {
     errors.push(results.systems[prop].data.error);
   }
 
+  for (const prop in results.systems) {
+    warnings.push(results.systems[prop].data.warning);
+  }
+
   useEffect(() => {
     axios
       .get("api/data")
@@ -30,7 +35,7 @@ const ChartContextProvider = props => {
   }, [])
 
   return (
-    <ChartContext.Provider value={{ results, systems, success, errors }}>
+    <ChartContext.Provider value={{ results, systems, success, errors, warnings }}>
         {props.children}
     </ChartContext.Provider>
 )
