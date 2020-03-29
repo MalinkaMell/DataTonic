@@ -6,7 +6,7 @@ const ChartContextProvider = props => {
 
   const [results, setResults] = useState([]);
   const [successRate, setSuccessRate] = useState(0);
-  const [warningPivot, setWarningPivot] = useState(0)
+  const [warningPivot, setWarningPivot] = useState(0);
 
   const systems = [];
   const success = [];
@@ -14,6 +14,7 @@ const ChartContextProvider = props => {
   const warnings = [];
   const successTransactions = [];
   const refunds = [];
+  const lost = [];
 
   for (const prop in results.systems) {
     systems.push(prop);
@@ -42,6 +43,12 @@ const ChartContextProvider = props => {
       refunds.push(results.transactions[prop].datetime);
     }
   }
+
+  for (const prop in results.transactions) {
+    if (results.transactions[prop].type === "refund" || results.transactions[prop].type === "failed") {
+      lost.push({datetime: results.transactions[prop].datetime, system: results.transactions[prop].system_id});
+    }
+  }
   
 
   useEffect(() => {
@@ -66,7 +73,7 @@ const ChartContextProvider = props => {
   }, [])
 
   return (
-    <ChartContext.Provider value={{ results, systems, success, errors, warnings, successTransactions, successRate, warningPivot, refunds }}>
+    <ChartContext.Provider value={{ results, systems, success, errors, warnings, successTransactions, successRate, warningPivot, refunds, lost }}>
         {props.children}
     </ChartContext.Provider>
 )

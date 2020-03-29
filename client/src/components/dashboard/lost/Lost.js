@@ -4,44 +4,71 @@ import { ChartContext } from "../../context/Chartscontext";
 
 
 const Lost = () => {
-  const { refunds, successRate, warningPivot } = useContext(ChartContext);
-  console.log(refunds)
+  
+  const { lost } = useContext(ChartContext);
 
-  const h = refunds.map(item => new Date(item).getHours());
+  const amazon = lost.filter(({ system }) => system === 1).map(({ datetime }) => new Date(datetime).getHours());
+  const microsoft = lost.filter(({ system }) => system === 2).map(({ datetime }) => new Date(datetime).getHours());
+  const logitech = lost.filter(({ system }) => system === 3).map(({ datetime }) => new Date(datetime).getHours());
+  const intel = lost.filter(({ system }) => system === 4).map(({ datetime }) => new Date(datetime).getHours());
+  const google = lost.filter(({ system }) => system === 5).map(({ datetime }) => new Date(datetime).getHours());
 
   const labels = ["3:00 pm", "4:00 pm", "5:00 pm", "6:00 pm", "7:00 pm", "8:00 pm", "9:00 pm", "10:00 pm", "11:00 pm", "12:00 am"];
 
-  const dataset = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+  const amazonData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+  const microsoftData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+  const logitechData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+  const intelData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+  const googleData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
 
-  
-  for (let i = 0; i < 24; i++) {
-
-    h.map(hour => {
-      if (hour === i && hour < i + 1) {
-        dataset.map((item => item.t === i && item.y++))
-      }
-    })
+  const createDatasetByVendor = (system, dataset) => {
+    for (let i = 0; i < 24; i++) {
+      system.map(hour => {
+        if (hour === i && hour < i + 1) {
+          dataset.map((item => item.t === i && item.y++))
+        }
+      })
+    }
   }
+
+  createDatasetByVendor(amazon, amazonData);
+  createDatasetByVendor(microsoft, microsoftData);
+  createDatasetByVendor(logitech, logitechData);
+  createDatasetByVendor(intel, intelData);
+  createDatasetByVendor(google, googleData);
 
   const chartData = {
     labels: labels,
     datasets: [
       {
-        label: "Refunds",
-        data: dataset,
-        borderColor: "darkgreen",
+        label: "Amazon",
+        data: amazonData,
+        borderColor: "green",
         fill: false
       },
       {
-        label: "Average",
-        data: new Array(dataset.length).fill(successRate),
+        label: "Microsoft",
+        data: microsoftData,
         borderColor: "blue",
         fill: false
       },
       {
-        label: "Warning Pivot",
-        data: new Array(dataset.length).fill(warningPivot),
-        borderColor: "yellow",
+        label: "Logitech",
+        data: logitechData,
+        borderColor: "orange",
+        fill: false
+      },
+      {
+        label: "Intel",
+        data: intelData,
+        borderColor: "lightblue",
+        fill: false
+      }
+      ,
+      {
+        label: "Google",
+        data: googleData,
+        borderColor: "gray",
         fill: false
       }
     ]

@@ -16,6 +16,10 @@ router.get("/data", (req, res) => {
   res.json(jsonData)
 });
 
+router.get("/data/:id", (req, res) => {
+  res.json(jsonData[req.params.id])
+});
+
 router.get("/successrate", (req, res) => {
   res.json(success.reduce((acc, val) => acc + val) / success.length)
 });
