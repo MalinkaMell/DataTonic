@@ -10,23 +10,26 @@ import Analytics from './pages/Analytics';
 import Forecasts from './pages/Forecasts';
 import NoMatch from './pages/Nomatch';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ChartContextProvider } from "./components/context/Chartscontext";
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Body>
-        <Switch>
-          <Route exact path="/"> <Dashboard /> </Route>
-          <Route path="/score"> <Score /> </Route>
-          <Route path="/statistics"> <Statistics /> </Route>
-          <Route path="/analytics"> <Analytics /> </Route>
-          <Route path="/forecasts"> <Forecasts /> </Route>
-          <Route> <NoMatch /> </Route>
-        </Switch>
-      </Body>
-      <Footer />
-    </Router>
+    <ChartContextProvider>
+      <Router>
+        <Header />
+        <Body>
+          <Switch>
+            <Route exact path="/"> <Dashboard /> </Route>
+            <Route path="/score"> <Score /> </Route>
+            <Route path="/statistics"> <Statistics /> </Route>
+            <Route path="/analytics"> <Analytics /> </Route>
+            <Route path="/forecasts"> <Forecasts /> </Route>
+            <Route> <NoMatch /> </Route>
+          </Switch>
+        </Body>
+        <Footer />
+      </Router>
+      </ChartContextProvider>
   );
 }
 
