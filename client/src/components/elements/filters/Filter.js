@@ -1,5 +1,5 @@
 import React from "react";
-import { Form} from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 const Filter = props => {
   return (
@@ -8,8 +8,8 @@ const Filter = props => {
         <Form.Label className="small">{props.label}</Form.Label>
         <Form.Control as="select" custom>
 
-          {props.options && props.options.map(item=> <option key={item}>{item}</option>)}
-          
+          {props.options && props.options.map(item => <option key={item}>{item}</option>)}
+
         </Form.Control>
       </Form.Group>
     </Form>

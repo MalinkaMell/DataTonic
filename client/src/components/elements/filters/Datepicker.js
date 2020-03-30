@@ -3,7 +3,6 @@ import { DatePickerInput } from "rc-datepicker";
 import { Form } from "react-bootstrap";
 import "rc-datepicker/lib/style.css";
 
-
 const Datepicker = props => {
 
   const [jsDate, setJsDate] = useState(new Date());

@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import { Bar } from "react-chartjs-2";
 import { ChartContext } from "../../context/Chartscontext";
-
+import BarChart from "../charts/Barchart";
 
 const TransactionsByArea = () => {
+
   const { systems, success, errors } = useContext(ChartContext);
 
+  //chart data
   const chartData = {
     labels: systems,
     datasets: [
@@ -28,49 +29,8 @@ const TransactionsByArea = () => {
 
   return (
     <React.Fragment>
-      <h5 className="mb-3">By Area</h5>
-      <Bar
-        data={chartData}
-        options={{
-          responsive: true,
-          title: {
-            display: true,
-            text: "Number of Transactions",
-            position: "left"
-          },
-          legend: {
-            display: true,
-            position: "bottom"
-          },
-          tooltips: {
-            mode: "index",
-            intersect: false,
-          },
-          hover: {
-            mode: "nearest",
-            intersect: true
-          },
-          scales: {
-            xAxes: [{
-              display: true,
-              scaleLabel: {
-                display: true,
-                labelString: "System"
-              }
-            }],
-            yAxes: [{
-              display: true,
-              ticks: {
-                min: 0,
-                max: 100,
-                stepSize: 20
-              }
-            }]
-          }
-        }}
-      />
+      <BarChart chartData={chartData} text="Number of Transactions" title="By Area" />
     </React.Fragment>
-
   )
 }
 

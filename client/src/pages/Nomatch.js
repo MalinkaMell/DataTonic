@@ -4,7 +4,7 @@ import { Col, Row, Container, Jumbotron } from "react-bootstrap";
 function NoMatch() {
   return (
     <Container fluid>
-      <Row className="d-flex align-items-center vh-100">
+      <Row className="d-flex align-items-center pt-5">
         <Col xs={12} className="d-flex align-items-center w-50 justify-content-center">
           <Jumbotron  className="d-flex flex-column align-items-center">
             <h1>404 Page Not Found</h1>

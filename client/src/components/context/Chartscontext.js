@@ -46,37 +46,37 @@ const ChartContextProvider = props => {
 
   for (const prop in results.transactions) {
     if (results.transactions[prop].type === "refund" || results.transactions[prop].type === "failed") {
-      lost.push({datetime: results.transactions[prop].datetime, system: results.transactions[prop].system_id});
+      lost.push({ datetime: results.transactions[prop].datetime, system: results.transactions[prop].system_id });
     }
   }
-  
+
 
   useEffect(() => {
     axios
-      .get("api/data")
-      .then(response => {setResults(response.data)})
+      .get("/api/data")
+      .then(response => { setResults(response.data) })
       .catch(error => console.log(error))
   }, [])
 
   useEffect(() => {
     axios
       .get("api/successrate")
-      .then(response => {setSuccessRate(response.data)})
+      .then(response => { setSuccessRate(response.data) })
       .catch(error => console.log(error))
   }, [])
 
   useEffect(() => {
     axios
       .get("api/warningpivot")
-      .then(response => {setWarningPivot(response.data)})
+      .then(response => { setWarningPivot(response.data) })
       .catch(error => console.log(error))
   }, [])
 
   return (
     <ChartContext.Provider value={{ results, systems, success, errors, warnings, successTransactions, successRate, warningPivot, refunds, lost }}>
-        {props.children}
+      {props.children}
     </ChartContext.Provider>
-)
+  )
 }
 
 export { ChartContextProvider, ChartContext };

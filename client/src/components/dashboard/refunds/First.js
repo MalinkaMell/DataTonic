@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import { Bar } from "react-chartjs-2";
 import { ChartContext } from "../../context/Chartscontext";
-
+import BarChart from "../charts/Barchart";
 
 const Refunds = () => {
-  
+
   const { systems, success, errors, warnings } = useContext(ChartContext);
 
+  //chart data
   const chartData = {
     labels: systems,
     datasets: [
@@ -36,49 +36,8 @@ const Refunds = () => {
 
   return (
     <React.Fragment>
-      <h5 className="mb-3">By Passed, Failed and Warning</h5>
-      <Bar
-        data={chartData}
-        options={{
-          responsive: true,
-          title: {
-            display: true,
-            text: "Number of Refunds",
-            position: "left"
-          },
-          legend: {
-            display: true,
-            position: "bottom"
-          },
-          tooltips: {
-            mode: "index",
-            intersect: true,
-          },
-          hover: {
-            mode: "nearest",
-            intersect: true
-          },
-          scales: {
-            xAxes: [{
-              display: true,
-              scaleLabel: {
-                display: true,
-                labelString: "System"
-              }
-            }],
-            yAxes: [{
-              display: true,
-              ticks: {
-                min: 0,
-                max: 100,
-                stepSize: 20
-              }
-            }]
-          }
-        }}
-      />
+      <BarChart chartData={chartData} text="Number of Refunds" title="By Passed, Failed and Warning" />
     </React.Fragment>
-
   )
 }
 

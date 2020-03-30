@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Filter from "./Filter";
 import Datepicker from "./Datepicker";
 import { Row, Col } from "react-bootstrap";
+import { ChartContext } from "../../context/Chartscontext";
 
 const Filters = () => {
+
+  const { systems } = useContext(ChartContext);
+  
   return (
 
     <Row className="mt-4 w-100">
@@ -12,7 +16,7 @@ const Filters = () => {
         <Filter
           label="Filter by Client"
           id="clients"
-          options={["Amazon", "Microsoft", "Logitech", "Intel", "Google"]}
+          options={systems}
         />
       </Col>
 

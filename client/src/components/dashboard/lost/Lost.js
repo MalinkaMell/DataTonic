@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Line } from "react-chartjs-2";
 import { ChartContext } from "../../context/Chartscontext";
+import SystemChart from "../charts/Systemschart";
 
 
 const Lost = () => {
@@ -16,9 +17,13 @@ const Lost = () => {
   const labels = ["3:00 pm", "4:00 pm", "5:00 pm", "6:00 pm", "7:00 pm", "8:00 pm", "9:00 pm", "10:00 pm", "11:00 pm", "12:00 am"];
 
   const amazonData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+
   const microsoftData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+
   const logitechData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+
   const intelData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+  
   const googleData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
 
   const createDatasetByVendor = (system, dataset) => {
@@ -76,45 +81,8 @@ const Lost = () => {
 
   return (
     <React.Fragment>
-      <h5 className="mb-3">By Hours</h5>
-      <Line
-        data={chartData}
-        options={{
-          responsive: true,
-          title: {
-            display: true,
-            text: "Refunds rate",
-            position: "left"
-          },
-          legend: {
-            display: true,
-            position: "bottom"
-          },
-          tooltips: {
-            mode: "index",
-            intersect: false,
-          },
-          hover: {
-            mode: "nearest",
-            intersect: true
-          },
-          scales: {
-            xAxes: [{
-              display: true
-            }],
-            yAxes: [{
-              display: true,
-              ticks: {
-                min: 0,
-                max: 100,
-                stepSize: 20
-              }
-            }]
-          }
-        }}
-      />
+      <SystemChart chartData={chartData} text="Refunds rate" title="By Hours" />
     </React.Fragment>
-
   )
 }
 
