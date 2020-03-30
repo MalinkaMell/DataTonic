@@ -3,25 +3,25 @@
     "Amazon": {
       "id": 1,
       "data": {
-        "success": 50,
+        "success": 98,
         "error": 20,
-        "warning": 10
+        "warning": 60
       }
     },
     "Microsoft": {
       "id": 2,
       "data": {
-        "success": 90,
+        "success": 98,
         "error": 20,
-        "warning": 10
+        "warning": 50
       }
     },
     "Logitech": {
       "id": 3,
       "data": {
-        "success": 40,
-        "error": 30,
-        "warning": 10
+        "success": 90,
+        "error": 80,
+        "warning": 60
       }
     },
     "Intel": {
@@ -29,7 +29,7 @@
       "data": {
         "success": 80,
         "error": 20,
-        "warning": 10
+        "warning": 60
       }
     },
     "Google": {
@@ -45,341 +45,277 @@
     {
       "system_id": 1,
       "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
+      "datetime": "2020-03-27T07:24:01Z"
     },
     {
       "system_id": 1,
       "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
+      "datetime": "2020-03-27T08:24:01Z"
     },
     {
       "system_id": 1,
       "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
+      "datetime": "2020-03-27T09:24:01Z"
     },
     {
       "system_id": 1,
       "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
+      "datetime": "2020-03-27T10:24:01Z"
     },
     {
       "system_id": 1,
       "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
+      "datetime": "2020-03-27T11:24:01Z"
     },
     {
       "system_id": 1,
       "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
+      "datetime": "2020-03-27T12:24:01Z"
     },
     {
       "system_id": 1,
       "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
+      "datetime": "2020-03-27T13:24:01Z"
     },
     {
       "system_id": 1,
       "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
+      "datetime": "2020-03-27T14:24:01Z"
     },
     {
       "system_id": 1,
       "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
+      "datetime": "2020-03-27T15:24:01Z"
     },
+
     {
       "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T01:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T02:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
-    },
-    {
-      "system_id": 1,
-      "type": "success",
-      "datetime": "2020-03-27T03:24:01Z"
+      "type": "refund",
+      "datetime": "2020-03-27T07:24:01Z"
     },
     {
       "system_id": 1,
       "type": "refund",
-      "datetime": "2020-03-27T03:24:01Z"
+      "datetime": "2020-03-27T08:24:01Z"
     },
     {
       "system_id": 1,
       "type": "refund",
-      "datetime": "2020-03-27T04:24:01Z"
+      "datetime": "2020-03-27T09:24:01Z"
     },
     {
       "system_id": 1,
       "type": "refund",
-      "datetime": "2020-03-27T05:24:01Z"
+      "datetime": "2020-03-27T10:24:01Z"
+    },
+    {
+      "system_id": 1,
+      "type": "refund",
+      "datetime": "2020-03-27T11:24:01Z"
+    },
+    {
+      "system_id": 1,
+      "type": "refund",
+      "datetime": "2020-03-27T12:24:01Z"
+    },
+    {
+      "system_id": 1,
+      "type": "refund",
+      "datetime": "2020-03-27T13:24:01Z"
+    },
+    {
+      "system_id": 1,
+      "type": "refund",
+      "datetime": "2020-03-27T14:24:01Z"
+    },
+    {
+      "system_id": 1,
+      "type": "refund",
+      "datetime": "2020-03-27T15:24:01Z"
+    },
+
+    {
+      "system_id": 2,
+      "type": "refund",
+      "datetime": "2020-03-27T07:24:01Z"
     },
     {
       "system_id": 2,
       "type": "refund",
-      "datetime": "2020-03-27T05:24:01Z"
+      "datetime": "2020-03-27T08:24:01Z"
     },
     {
-      "system_id": 1,
-      "type": "failed",
-      "datetime": "2020-03-27T06:24:01Z"
+      "system_id": 2,
+      "type": "refund",
+      "datetime": "2020-03-27T09:24:01Z"
+    },
+    {
+      "system_id": 2,
+      "type": "refund",
+      "datetime": "2020-03-27T10:24:01Z"
+    },
+    {
+      "system_id": 2,
+      "type": "refund",
+      "datetime": "2020-03-27T11:24:01Z"
+    },
+    {
+      "system_id": 2,
+      "type": "refund",
+      "datetime": "2020-03-27T12:24:01Z"
+    },
+    {
+      "system_id": 2,
+      "type": "refund",
+      "datetime": "2020-03-27T13:24:01Z"
+    },
+    {
+      "system_id": 2,
+      "type": "refund",
+      "datetime": "2020-03-27T14:24:01Z"
+    },
+    {
+      "system_id": 2,
+      "type": "refund",
+      "datetime": "2020-03-27T15:24:01Z"
+    },
+
+    {
+      "system_id": 3,
+      "type": "refund",
+      "datetime": "2020-03-27T07:24:01Z"
+    },
+    {
+      "system_id": 3,
+      "type": "refund",
+      "datetime": "2020-03-27T08:24:01Z"
+    },
+    {
+      "system_id": 3,
+      "type": "refund",
+      "datetime": "2020-03-27T09:24:01Z"
+    },
+    {
+      "system_id": 3,
+      "type": "refund",
+      "datetime": "2020-03-27T10:24:01Z"
+    },
+    {
+      "system_id": 3,
+      "type": "refund",
+      "datetime": "2020-03-27T11:24:01Z"
+    },
+    {
+      "system_id": 3,
+      "type": "refund",
+      "datetime": "2020-03-27T12:24:01Z"
+    },
+    {
+      "system_id": 3,
+      "type": "refund",
+      "datetime": "2020-03-27T13:24:01Z"
+    },
+    {
+      "system_id": 3,
+      "type": "refund",
+      "datetime": "2020-03-27T14:24:01Z"
+    },
+    {
+      "system_id": 3,
+      "type": "refund",
+      "datetime": "2020-03-27T15:24:01Z"
+    },
+
+    {
+      "system_id": 4,
+      "type": "refund",
+      "datetime": "2020-03-27T07:24:01Z"
+    },
+    {
+      "system_id": 4,
+      "type": "refund",
+      "datetime": "2020-03-27T08:24:01Z"
+    },
+    {
+      "system_id": 4,
+      "type": "refund",
+      "datetime": "2020-03-27T09:24:01Z"
+    },
+    {
+      "system_id": 4,
+      "type": "refund",
+      "datetime": "2020-03-27T10:24:01Z"
+    },
+    {
+      "system_id": 4,
+      "type": "refund",
+      "datetime": "2020-03-27T11:24:01Z"
+    },
+    {
+      "system_id": 4,
+      "type": "refund",
+      "datetime": "2020-03-27T12:24:01Z"
+    },
+    {
+      "system_id": 4,
+      "type": "refund",
+      "datetime": "2020-03-27T13:24:01Z"
+    },
+    {
+      "system_id": 4,
+      "type": "refund",
+      "datetime": "2020-03-27T14:24:01Z"
+    },
+    {
+      "system_id": 4,
+      "type": "refund",
+      "datetime": "2020-03-27T15:24:01Z"
+    },
+
+    {
+      "system_id": 5,
+      "type": "refund",
+      "datetime": "2020-03-27T07:24:01Z"
+    },
+    {
+      "system_id": 5,
+      "type": "refund",
+      "datetime": "2020-03-27T08:24:01Z"
+    },
+    {
+      "system_id": 5,
+      "type": "refund",
+      "datetime": "2020-03-27T09:24:01Z"
+    },
+    {
+      "system_id": 5,
+      "type": "refund",
+      "datetime": "2020-03-27T10:24:01Z"
+    },
+    {
+      "system_id": 5,
+      "type": "refund",
+      "datetime": "2020-03-27T11:24:01Z"
+    },
+    {
+      "system_id": 5,
+      "type": "refund",
+      "datetime": "2020-03-27T12:24:01Z"
+    },
+    {
+      "system_id": 5,
+      "type": "refund",
+      "datetime": "2020-03-27T13:24:01Z"
+    },
+    {
+      "system_id": 5,
+      "type": "refund",
+      "datetime": "2020-03-27T14:24:01Z"
+    },
+    {
+      "system_id": 5,
+      "type": "refund",
+      "datetime": "2020-03-27T15:24:01Z"
     }
   ]
 }

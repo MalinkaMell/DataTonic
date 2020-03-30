@@ -1,16 +1,13 @@
 import React, { useContext } from "react";
 import { ChartContext } from "../../context/Chartscontext";
 import LineChart from "../charts/Linechart";
-import { helper, labels } from "../charts/Helper";
+import { helper, dataset, labels } from "../charts/Helper";
 
 const TransactionsByHours = () => {
 
   const { successTransactions, successRate, warningPivot } = useContext(ChartContext);
 
-  //creating initial dataset object, going to add number of transactions based on hour
-  const dataset = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
-
-  helper(successTransactions, dataset);
+  helper(successTransactions);
 
   const chartData = {
     labels: labels,
@@ -23,13 +20,13 @@ const TransactionsByHours = () => {
       },
       {
         label: "Average",
-        data: new Array(dataset.length).fill(successRate),
+        data: new Array(labels.length).fill(successRate),
         borderColor: "blue",
         fill: false
       },
       {
         label: "Warning Pivot",
-        data: new Array(dataset.length).fill(warningPivot),
+        data: new Array(labels.length).fill(warningPivot),
         borderColor: "yellow",
         fill: false
       }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import "./Panel.css";
 
 const Panel = props => {
   return (

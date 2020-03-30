@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { Line } from "react-chartjs-2";
 import { ChartContext } from "../../context/Chartscontext";
 import SystemChart from "../charts/Systemschart";
 
@@ -14,17 +13,18 @@ const Lost = () => {
   const intel = lost.filter(({ system }) => system === 4).map(({ datetime }) => new Date(datetime).getHours());
   const google = lost.filter(({ system }) => system === 5).map(({ datetime }) => new Date(datetime).getHours());
 
-  const labels = ["3:00 pm", "4:00 pm", "5:00 pm", "6:00 pm", "7:00 pm", "8:00 pm", "9:00 pm", "10:00 pm", "11:00 pm", "12:00 am"];
+  const labels = ["12:00 am", "1:00 am", "1:00 am", "2:00 am", "4:00 am", "5:00 am", "6:00 am", "7:00 am", "8:00 am"];
 
-  const amazonData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+  const amazonData = [{ t: 0, y: 0 }, { t: 1, y: 0 }, { t: 2, y: 0 }, { t: 3, y: 0 }, { t: 4, y: 0 }, { t: 5, y: 0 }, { t: 6, y: 0 }, { t: 7, y: 0 }, { t: 8, y: 0 }];
+console.log(amazonData);
 
-  const microsoftData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+  const microsoftData = [{ t: 0, y: 0 }, { t: 1, y: 0 }, { t: 2, y: 0 }, { t: 3, y: 0 }, { t: 4, y: 0 }, { t: 5, y: 0 }, { t: 6, y: 0 }, { t: 7, y: 0 }, { t: 8, y: 0 }];
 
-  const logitechData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+  const logitechData = [{ t: 0, y: 0 }, { t: 1, y: 0 }, { t: 2, y: 0 }, { t: 3, y: 0 }, { t: 4, y: 0 }, { t: 5, y: 0 }, { t: 6, y: 0 }, { t: 7, y: 0 }, { t: 8, y: 0 }];
 
-  const intelData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+  const intelData = [{ t: 0, y: 0 }, { t: 1, y: 0 }, { t: 2, y: 0 }, { t: 3, y: 0 }, { t: 4, y: 0 }, { t: 5, y: 0 }, { t: 6, y: 0 }, { t: 7, y: 0 }, { t: 8, y: 0 }];
   
-  const googleData = [{ t: 15, y: 0 }, { t: 16, y: 0 }, { t: 17, y: 0 }, { t: 18, y: 0 }, { t: 19, y: 0 }, { t: 20, y: 0 }, { t: 21, y: 0 }, { t: 22, y: 0 }, { t: 23, y: 0 }, { t: 24, y: 0 }];
+  const googleData = [{ t: 0, y: 0 }, { t: 1, y: 0 }, { t: 2, y: 0 }, { t: 3, y: 0 }, { t: 4, y: 0 }, { t: 5, y: 0 }, { t: 6, y: 0 }, { t: 7, y: 0 }, { t: 8, y: 0 }];
 
   const createDatasetByVendor = (system, dataset) => {
     for (let i = 0; i < 24; i++) {

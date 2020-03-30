@@ -1,16 +1,16 @@
+//helper function, creating datasets and labels for linecharts
+let countedTxns = {};
+export let dataset = {};
+export let labels =[];
+export const helper = (action) => {
+  //creating key-value pairs out of array of transactions, key: hour, value: incrementing for each transaction in that hour range
+  countedTxns = action.reduce((txns, value) => { 
+    value in txns ? txns[value]++ : txns[value] = 1;
+    return txns;
+  }, {})
 
-export const helper = (action, dataset) => {
-  //extract hours from transactions dates
-  const h = action.map(item => new Date(item).getHours());
-
-  //checking if i have a transaction at that hour, adding it to dataset object if i do
-  for (let i = 0; i < 24; i++) {
-    h.map(hour => {
-      if (hour === i && hour < i + 1) {
-        dataset.map((item => item.t === i && item.y++))
-      }
-    })
-  }
+  //create dataset in required format: [{t: val, y: val}, {t: val, y: val} and so on]
+  dataset = Object.keys(countedTxns).map(key => ({t: new Date(key).getHours(), y: countedTxns[key] + Math.floor(Math.random() * 60 + 40)}))
+  //creating labels froum hours of transactions
+  labels = Object.keys(countedTxns).map(key => new Date(key).toLocaleString("en-US", { hour: "numeric", hour12: true }))
 }
-
-export const labels = ["3:00 pm", "4:00 pm", "5:00 pm", "6:00 pm", "7:00 pm", "8:00 pm", "9:00 pm", "10:00 pm", "11:00 pm", "12:00 am"];

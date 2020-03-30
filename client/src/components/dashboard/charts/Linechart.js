@@ -35,7 +35,8 @@ const LineChart = props => {
               ticks: {
                 min: 0,
                 max: 100,
-                stepSize: 20
+                stepSize: 20,
+                callback: value => value + "%"
               }
             }]
           }
