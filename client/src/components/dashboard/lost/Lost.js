@@ -4,26 +4,27 @@ import SystemChart from "../charts/Systemschart";
 
 
 const Lost = () => {
-  
+
   const { lost } = useContext(ChartContext);
 
+  //filtering transactions by system
   const amazon = lost.filter(({ system }) => system === 1).map(({ datetime }) => datetime);
   const microsoft = lost.filter(({ system }) => system === 2).map(({ datetime }) => datetime);
   const logitech = lost.filter(({ system }) => system === 3).map(({ datetime }) => datetime);
   const intel = lost.filter(({ system }) => system === 4).map(({ datetime }) => datetime);
   const google = lost.filter(({ system }) => system === 5).map(({ datetime }) => datetime);
 
-  const labels = ["12:00 am", "1:00 am", "1:00 am", "2:00 am", "4:00 am", "5:00 am", "6:00 am", "7:00 am", "8:00 am", "9:00 am", "10:00 am", "11:00 am", "12:00 pm", "1:00 pm", "2:00 pm", "3:00 pm", "4:00 pm", "5:00 pm", "6:00 pm", "7:00 pm", "8:00 pm"];
-
+  //creating key-value pairs out of array of transactions, key: hour, value: incrementing for each transaction in that hour range
   const counter = (system) => {
-    return system.reduce((txns, value) => { 
+    return system.reduce((txns, value) => {
       value in txns ? txns[value]++ : txns[value] = 1;
       return txns;
     }, {})
   }
 
+  //create dataset in required format: [{t: val, y: val}, {t: val, y: val} and so on], adding random number so my curve is not so flat and my json file is not so cluttered
   const dataset = (counter) => {
-   return Object.keys(counter).map(key => ({t: new Date(key).getHours(), y: counter[key] + Math.floor(Math.random() * 4)}))
+    return Object.keys(counter).map(key => ({ t: new Date(key).getHours(), y: counter[key] + Math.floor(Math.random() * 4) }))
   }
 
   let countedTxnsA = counter(amazon);
@@ -37,6 +38,10 @@ const Lost = () => {
   let datasetI = dataset(countedTxnsI);
   let datasetG = dataset(countedTxnsG);
 
+  //creating labels 
+  const labels = Object.keys(countedTxnsA).map(key => new Date(key).toLocaleString("en-US", { hour: "numeric", minute: "2-digit", hour12: true }))
+
+  //chart data
   const chartData = {
     labels: labels,
     datasets: [

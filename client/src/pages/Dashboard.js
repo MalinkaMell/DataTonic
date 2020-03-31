@@ -5,10 +5,10 @@ import OverallContainer from "../components/dashboard/overall/Overallcontainer";
 import Subtitle from "../components/elements/subtitle/Subtitle";
 import { Row, Col } from "react-bootstrap";
 import Panel from "../components/elements/panel/Panel";
-import TransactionsByArea from "../components/dashboard/transactions/First";
-import Refunds from "../components/dashboard/refunds/First";
-import TransactionsByHours from "../components/dashboard/transactions/Second";
-import RefundsByHours from "../components/dashboard/refunds/Second";
+import TransactionsByArea from "../components/dashboard/transactions/Firstchart";
+import Refunds from "../components/dashboard/refunds/Firstchart";
+import TransactionsByHours from "../components/dashboard/transactions/Secondchart";
+import RefundsByHours from "../components/dashboard/refunds/Secondchart";
 import Lost from "../components/dashboard/lost/Lost";
 
 const Dashboard = () => {

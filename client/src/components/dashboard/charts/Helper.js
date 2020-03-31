@@ -9,8 +9,8 @@ export const helper = (action) => {
     return txns;
   }, {})
 
-  //create dataset in required format: [{t: val, y: val}, {t: val, y: val} and so on]
-  dataset = Object.keys(countedTxns).map(key => ({t: new Date(key).getHours(), y: countedTxns[key] + Math.floor(Math.random() * 60 + 40)}))
+  //create dataset in required format: [{t: val, y: val}, {t: val, y: val} and so on], adding random number so my curve is not so flat and my json file is not so cluttered
+  dataset = Object.keys(countedTxns).map(key => ({t: new Date(key).getHours(), y: countedTxns[key] + Math.floor(Math.random() * 60 + 30)}))
   //creating labels froum hours of transactions
   labels = Object.keys(countedTxns).map(key => new Date(key).toLocaleString("en-US", { hour: "numeric", minute: "2-digit", hour12: true }))
 }

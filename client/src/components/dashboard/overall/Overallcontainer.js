@@ -7,14 +7,14 @@ const OverallContainer = () => {
   //pulling data from context
   const { systems, success, errors } = useContext(ChartContext);
 
-//calculating average: 100% minus errors divided by sum of errors and success, multiply by 100 to get decimal value
+  //calculating average: 100% minus errors divided by sum of errors and success, multiply by 100 to get decimal value
   const average = (errors, success) => {
     return Math.floor(100 - ((errors / (errors + success)) * 100))
   }
 
   //making key-value pairs out of array of systems and calculated average
   const health = systems.reduce((acc, val, i) => {
-    acc[val] = acc[val] ? acc[val] + ", " + average(errors[i], success[i]) : average(errors[i], success[i]);
+    acc[val] = average(errors[i], success[i]);
     return acc;
   }, {})
   
