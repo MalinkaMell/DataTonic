@@ -23,7 +23,7 @@ const Lost = () => {
   }
 
   const dataset = (counter) => {
-   return Object.keys(counter).map(key => ({t: new Date(key).getHours(), y: counter[key] + Math.floor(Math.random() * 10)}))
+   return Object.keys(counter).map(key => ({t: new Date(key).getHours(), y: counter[key] + Math.floor(Math.random() * 4)}))
   }
 
   let countedTxnsA = counter(amazon);
@@ -44,32 +44,47 @@ const Lost = () => {
         label: "Amazon",
         data: datasetA,
         borderColor: "green",
-        fill: false
+        fill: false,
+        tension: 0,
+        pointStyle: "line",
+        borderWidth: 2
       },
       {
         label: "Microsoft",
         data: datasetM,
         borderColor: "blue",
-        fill: false
+        fill: false,
+        tension: 0,
+        pointStyle: "line",
+        borderWidth: 2
       },
       {
         label: "Logitech",
         data: datasetL,
         borderColor: "orange",
-        fill: false
+        fill: false,
+        tension: 0,
+        pointStyle: "line",
+        borderWidth: 2
       },
       {
         label: "Intel",
         data: datasetI,
         borderColor: "lightblue",
-        fill: false
+        fill: false,
+        tension: 0,
+        pointStyle: "line",
+        borderWidth: 2
       }
       ,
       {
         label: "Google",
         data: datasetG,
         borderColor: "gray",
-        fill: false
+        fill: false,
+        tension: 0,
+        pointStyle: "line",
+        borderWidth: 2
       }
     ]
   }

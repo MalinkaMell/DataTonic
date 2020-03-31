@@ -7,10 +7,9 @@ const SystemChart = props => {
       <h5 className="mb-3">{props.title}</h5>
       <Line
         data={props.chartData}
+        height={100}
         options={{
-          height: 200,
-          responsive: true,
-          maintainAspectRatio: true,
+          
           title: {
             display: true,
             text: props.text,

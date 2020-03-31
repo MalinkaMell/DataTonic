@@ -12,5 +12,5 @@ export const helper = (action) => {
   //create dataset in required format: [{t: val, y: val}, {t: val, y: val} and so on]
   dataset = Object.keys(countedTxns).map(key => ({t: new Date(key).getHours(), y: countedTxns[key] + Math.floor(Math.random() * 60 + 40)}))
   //creating labels froum hours of transactions
-  labels = Object.keys(countedTxns).map(key => new Date(key).toLocaleString("en-US", { hour: "numeric", hour12: true }))
+  labels = Object.keys(countedTxns).map(key => new Date(key).toLocaleString("en-US", { hour: "numeric", minute: "2-digit", hour12: true }))
 }
