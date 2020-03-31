@@ -1,6 +1,6 @@
 //helper function, creating datasets and labels for linecharts
 let countedTxns = {};
-export let dataset = {};
+export let dataset = [];
 export let labels =[];
 export const helper = (action) => {
   //creating key-value pairs out of array of transactions, key: hour, value: incrementing for each transaction in that hour range

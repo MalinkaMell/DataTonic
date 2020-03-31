@@ -17,10 +17,7 @@ const OverallContainer = () => {
     acc[val] = acc[val] ? acc[val] + ", " + average(errors[i], success[i]) : average(errors[i], success[i]);
     return acc;
   }, {})
-
-  console.log(health);
   
-
   //mapping health and passing to overall component info nessesary for health display
   return (
     <React.Fragment>

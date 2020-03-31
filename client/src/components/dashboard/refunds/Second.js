@@ -5,6 +5,7 @@ import { helper, dataset, labels } from "../charts/Helper";
 
 const RefundsByHours = () => {
   const { refunds, successRate, warningPivot } = useContext(ChartContext);
+console.log(dataset);
 
   helper(refunds);
 

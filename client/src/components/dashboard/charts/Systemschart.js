@@ -8,7 +8,9 @@ const SystemChart = props => {
       <Line
         data={props.chartData}
         options={{
+          height: 200,
           responsive: true,
+          maintainAspectRatio: true,
           title: {
             display: true,
             text: props.text,
@@ -34,8 +36,8 @@ const SystemChart = props => {
               display: true,
               ticks: {
                 min: 0,
-                max: 100,
-                stepSize: 20
+                max: 30,
+                stepSize: 10
               }
             }]
           }

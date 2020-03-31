@@ -7,72 +7,67 @@ const Lost = () => {
   
   const { lost } = useContext(ChartContext);
 
-  const amazon = lost.filter(({ system }) => system === 1).map(({ datetime }) => new Date(datetime).getHours());
-  const microsoft = lost.filter(({ system }) => system === 2).map(({ datetime }) => new Date(datetime).getHours());
-  const logitech = lost.filter(({ system }) => system === 3).map(({ datetime }) => new Date(datetime).getHours());
-  const intel = lost.filter(({ system }) => system === 4).map(({ datetime }) => new Date(datetime).getHours());
-  const google = lost.filter(({ system }) => system === 5).map(({ datetime }) => new Date(datetime).getHours());
+  const amazon = lost.filter(({ system }) => system === 1).map(({ datetime }) => datetime);
+  const microsoft = lost.filter(({ system }) => system === 2).map(({ datetime }) => datetime);
+  const logitech = lost.filter(({ system }) => system === 3).map(({ datetime }) => datetime);
+  const intel = lost.filter(({ system }) => system === 4).map(({ datetime }) => datetime);
+  const google = lost.filter(({ system }) => system === 5).map(({ datetime }) => datetime);
 
-  const labels = ["12:00 am", "1:00 am", "1:00 am", "2:00 am", "4:00 am", "5:00 am", "6:00 am", "7:00 am", "8:00 am"];
+  const labels = ["12:00 am", "1:00 am", "1:00 am", "2:00 am", "4:00 am", "5:00 am", "6:00 am", "7:00 am", "8:00 am", "9:00 am", "10:00 am", "11:00 am", "12:00 pm", "1:00 pm", "2:00 pm", "3:00 pm", "4:00 pm", "5:00 pm", "6:00 pm", "7:00 pm", "8:00 pm"];
 
-  const amazonData = [{ t: 0, y: 0 }, { t: 1, y: 0 }, { t: 2, y: 0 }, { t: 3, y: 0 }, { t: 4, y: 0 }, { t: 5, y: 0 }, { t: 6, y: 0 }, { t: 7, y: 0 }, { t: 8, y: 0 }];
-console.log(amazonData);
-
-  const microsoftData = [{ t: 0, y: 0 }, { t: 1, y: 0 }, { t: 2, y: 0 }, { t: 3, y: 0 }, { t: 4, y: 0 }, { t: 5, y: 0 }, { t: 6, y: 0 }, { t: 7, y: 0 }, { t: 8, y: 0 }];
-
-  const logitechData = [{ t: 0, y: 0 }, { t: 1, y: 0 }, { t: 2, y: 0 }, { t: 3, y: 0 }, { t: 4, y: 0 }, { t: 5, y: 0 }, { t: 6, y: 0 }, { t: 7, y: 0 }, { t: 8, y: 0 }];
-
-  const intelData = [{ t: 0, y: 0 }, { t: 1, y: 0 }, { t: 2, y: 0 }, { t: 3, y: 0 }, { t: 4, y: 0 }, { t: 5, y: 0 }, { t: 6, y: 0 }, { t: 7, y: 0 }, { t: 8, y: 0 }];
-  
-  const googleData = [{ t: 0, y: 0 }, { t: 1, y: 0 }, { t: 2, y: 0 }, { t: 3, y: 0 }, { t: 4, y: 0 }, { t: 5, y: 0 }, { t: 6, y: 0 }, { t: 7, y: 0 }, { t: 8, y: 0 }];
-
-  const createDatasetByVendor = (system, dataset) => {
-    for (let i = 0; i < 24; i++) {
-      system.map(hour => {
-        if (hour === i && hour < i + 1) {
-          dataset.map((item => item.t === i && item.y++))
-        }
-      })
-    }
+  const counter = (system) => {
+    return system.reduce((txns, value) => { 
+      value in txns ? txns[value]++ : txns[value] = 1;
+      return txns;
+    }, {})
   }
 
-  createDatasetByVendor(amazon, amazonData);
-  createDatasetByVendor(microsoft, microsoftData);
-  createDatasetByVendor(logitech, logitechData);
-  createDatasetByVendor(intel, intelData);
-  createDatasetByVendor(google, googleData);
+  const dataset = (counter) => {
+   return Object.keys(counter).map(key => ({t: new Date(key).getHours(), y: counter[key] + Math.floor(Math.random() * 10)}))
+  }
+
+  let countedTxnsA = counter(amazon);
+  let countedTxnsM = counter(microsoft);
+  let countedTxnsL = counter(logitech);
+  let countedTxnsI = counter(intel);
+  let countedTxnsG = counter(google);
+  let datasetA = dataset(countedTxnsA);
+  let datasetM = dataset(countedTxnsM);
+  let datasetL = dataset(countedTxnsL);
+  let datasetI = dataset(countedTxnsI);
+  let datasetG = dataset(countedTxnsG);
 
   const chartData = {
     labels: labels,
     datasets: [
       {
         label: "Amazon",
-        data: amazonData,
+        data: datasetA,
         borderColor: "green",
         fill: false
       },
       {
         label: "Microsoft",
-        data: microsoftData,
+        data: datasetM,
         borderColor: "blue",
         fill: false
       },
       {
         label: "Logitech",
-        data: logitechData,
+        data: datasetL,
         borderColor: "orange",
         fill: false
       },
       {
         label: "Intel",
-        data: intelData,
+        data: datasetI,
         borderColor: "lightblue",
         fill: false
       }
       ,
       {
         label: "Google",
-        data: googleData,
+        data: datasetG,
         borderColor: "gray",
         fill: false
       }
